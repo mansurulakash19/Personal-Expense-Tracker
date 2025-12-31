@@ -17,7 +17,7 @@ public class ExpenseManager {
  if (!file.exists()) return expenses;
  Scanner scanner = new Scanner(file);
  while (scanner.hasNextLine()) {
-12
+
  String line = scanner.nextLine();
  Expense expense = Expense.fromFileFormat(line);
  if (expense != null) expenses.add(expense);
@@ -35,7 +35,6 @@ public class ExpenseManager {
  }
  return summary;
  }
-13
  public void generateSummaryReport(String reportFile) throws IOException {
  List<Expense> expenses = getAllExpenses();
  Map<String, Double> summary = getCategorySummary();
