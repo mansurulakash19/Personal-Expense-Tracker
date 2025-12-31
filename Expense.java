@@ -4,7 +4,7 @@ public class Expense {
  private double amount;
  private String description;
  public Expense(String date, String category, double amount, String description) {
-9
+
  this.date = date;
  this.category = category;
  this.amount = amount;
@@ -27,7 +27,6 @@ public String getDate() {
  public String toString() {
  return "Date: " + date +
  " | Category: " + category +
-10
  " | Amount: " + amount +
  " | Description: " + description;
 }
