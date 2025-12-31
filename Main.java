@@ -13,7 +13,6 @@ public class Main {
  System.out.println("5. Exit");
  System.out.print("Choose option (1-5): ");
  int choice;
-15
  try {
  choice = Integer.parseInt(scanner.nextLine());
  } catch (Exception e) {
@@ -31,7 +30,6 @@ public class Main {
  System.out.print("Enter Description: ");
  String description = scanner.nextLine();
  Expense exp = new Expense(date, category, amount, description);
-16
  try {
  manager.addExpense(exp);
  System.out.println("Expense added successfully!");
@@ -53,8 +51,8 @@ public class Main {
  Map<String, Double> summary = manager.getCategorySummary();
  if (summary.isEmpty()) {
  System.out.println("No data found.");
-17
- } else {
+ }
+ else {
  summary.forEach((cat, total) ->
  System.out.println(cat + " = " + total + " BDT"));
  }
